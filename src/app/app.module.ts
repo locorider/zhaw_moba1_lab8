@@ -4,10 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {Board} from "./Board";
+import {PlayerDialog} from "./PlayerDialog";
+import {WonDialog} from "./WonDialog";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Board,
+    PlayerDialog,
+    WonDialog
   ],
   imports: [
     BrowserModule,

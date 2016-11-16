@@ -1,3 +1,22 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="players">
+        <div class="player" *ngFor="let player of players; let i = index">
+          <div class="player-id">Spieler {{i+1}}</div>
+          <div class="player-name">{{player.name}}</div>
+          <div class="current" *ngIf="!player.hasWon && board.currentPlayer===player">Ist am Zug.</div>
+        </div>
+      </div>
+      <div class="help-text">Two players put alternately a piece on the board. The first player with four...</div>
+    </div>
+    <div class="col">
+      <div class="board-wrapper">
+        <board #board (playerWon)="onPlayerWon($event)"></board>
+      </div>
+    </div>
+  </div>
+</div>
+
+<playerDialog #playerDialog></playerDialog>
+<wonDialog #wonDialog></wonDialog>

@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "canvasjs": "registry:dt/canvasjs#0.0.0+20161004183959"
+  }
+}

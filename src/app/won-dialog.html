@@ -1,0 +1,8 @@
+<div #mobileDialog data-role="popup">
+  <div data-role="header">
+    <h1 #wonTitle *ngIf="player">Spieler {{player.name}} hat gewonnen</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" (click)="closeDialog()">OK</a>
+  </div>
+</div>
